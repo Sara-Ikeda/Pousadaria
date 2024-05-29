@@ -30,6 +30,8 @@
     <% end %>
     </div>
     <%= link_to 'Cadastrar Quarto', new_inn_dashboard_inns_inn_rooms_path, class: 'btn btn-primary' %>
+
+    <%= button_to 'Reservar para Grupo', new_inn_dashboard_inns_group_reservation_path, method: :get %>
   </section>
 <% else %>
   <h1>Pousadaria</h1>
