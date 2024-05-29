@@ -29,7 +29,7 @@ describe "Inn owner creates a group reservation" do
     fill_in "Data Final",	with: 2.months.from_now
     click_on 'Reservar'
 
-    expect(current_path).to eq inn_path(owner.inn)
+    expect(current_path).to eq  inn_management_path(owner.inn)
     expect(page).to have_content 'Reserva criada com sucesso!'
   end
 

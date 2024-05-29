@@ -30,7 +30,15 @@
     <% end %>
     </div>
     <%= link_to 'Cadastrar Quarto', new_inn_dashboard_inns_inn_rooms_path, class: 'btn btn-primary' %>
+  </section>
 
+  <section>
+    <h2>Reservas para Grupo</h2>
+    <% @inn.group_reservations.each do |reservation| %>
+      <p>Nome: <%= reservation.name %></p>
+      <p>Data Inicial: <%= reservation.start_date %></p>
+      <p>Data Final: <%= reservation.end_date %></p>
+    <% end %>
     <%= button_to 'Reservar para Grupo', new_inn_dashboard_inns_group_reservation_path, method: :get %>
   </section>
 <% else %>
