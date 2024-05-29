@@ -16,5 +16,6 @@ describe "Inn owner view group reservations" do
     expect(page).to have_content "Convidados para festa da cidade"
     expect(page).to have_content "Data Inicial: #{1.months.from_now}"
     expect(page).to have_content "Data Final: #{2.months.from_now}"
+    
   end
 end
