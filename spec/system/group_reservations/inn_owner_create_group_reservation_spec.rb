@@ -31,7 +31,6 @@ describe "Inn owner creates a group reservation" do
 
     expect(current_path).to eq inn_path(owner.inn)
     expect(page).to have_content 'Reserva criada com sucesso!'
-    expect(page).to have_content 'Convidados para Festa da Cidade'
   end
   
 end

@@ -1,9 +1,17 @@
 <h2>Reservar para Grupo</h2>
 
-<%= form_with(model: @group_reservation, url: @inn) do |f| %>
+<%= form_with(model: @group_reservation, url: inn_dashboard_inns_group_reservation_path) do |f| %>
   <div>
     <%= f.label :name, 'Nome' %>
     <%= f.text_field :name %>
   </div>
-  
+  <div>
+    <%= f.label :start_date, 'Data Inicial' %>
+    <%= f.text_field :start_date %>
+  </div>
+  <div>
+    <%= f.label :end_date, 'Data Final' %>
+    <%= f.text_field :end_date %>
+  </div>
+  <%= f.submit "Reservar" %>
 <% end %>
